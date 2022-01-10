@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap");
+@font-face {
+  font-family: font-1;
+  src: url(../assets/fonts/Potta_One/PottaOne-Regular.ttf);
+}
+*{
+  scroll-behavior: smooth;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "font-1", Arial, Helvetica, sans-serif;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  background: center/cover no-repeat url(../assets/img/bg.jpg);
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: "Hachi Maru Pop", cursive;
+  text-transform: uppercase;
+  text-decoration: underline overline;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px blueviolet;
+}
+
+ul {
+  display: flex;
+  padding: 50px;
+  justify-content: space-around;
+}
+
+ul li {
+  list-style-type: none;
+  height: 100px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 50%;
+  text-transform: uppercase;
+}
+ul li:nth-child(2){
+  background: aquamarine;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+main p .special{
+  color: red
+}
+
+main .grid {
+  padding: 2rem;
+}
+
+main .grid_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+}
+
+main .grid_container img {
+  margin: auto;
+}
+
+main .grid_container form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: "i1 i2"
+ "ta ta"
+ "bt bt";
+}
+
+main .grid #firstname {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: i1;
+}
+
+main .grid #lastname {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: i2;
+}
+
+main .grid textarea {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: ta;
+}
+
+main .grid input,
+main .grid textarea {
+  resize: none;
+  margin: 5px;
+  height: 45px;
+  border: 1px solid blueviolet;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+main .grid input[type="submit"] {
+  cursor: pointer;
+  background: burlywood;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: bt;
+}
+
+main .grid input[type="submit"]:hover {
+  background: #daa35c;
+}
+
+main .grid .color-container {
+  display: -ms-grid;
+  display: grid;
+  height: 700px;
+  grid-gap: 20px;
+      grid-template-areas: "y y p"
+ "r g p"
+ "r l l";
+}
+
+main .grid .color-container .yellow {
+  background: yellow;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: y;
+}
+
+main .grid .color-container .purple {
+  background: purple;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: p;
+}
+
+main .grid .color-container .red {
+  background: red;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: r;
+}
+
+main .grid .color-container .green {
+  background: green;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: g;
+}
+
+main .grid .color-container .lightpurple {
+  background: plum;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: l;
+}
+
+@media screen and (max-width: 867px) {
+  main .grid .grid_container {
+    display: block;
+  }
+  main .grid .grid_container form {
+    margin-top: 20px;
+  }
+  main .grid .grid_container img {
+    display: block;
+    margin: auto;
+  }
+  main .grid .color-container {
+    display: block;
+  }
+  main .grid .color-container div {
+    height: 100px;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 534px) {
+  main .grid .grid_container form {
+        grid-template-areas: "i1"
+ "i2"
+ "ta"
+ "bt";
+  }
+}
+
+@media screen and (max-width: 470px) {
+  main .grid .grid_container form {
+    display: block;
+  }
+  main .grid .grid_container form input, main .grid .grid_container form textarea {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

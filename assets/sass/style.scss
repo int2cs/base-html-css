@@ -1,0 +1,130 @@
+@font-face {
+  font-family: font-1;
+  src: url(/assets/fonts/Potta_One/PottaOne-Regular.ttf);
+}
+@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap");
+
+body {
+  font-family: "font-1", Arial, Helvetica, sans-serif;
+  background: center / cover no-repeat url(/assets/img/bg.jpg);
+  min-height: 100vh;
+}
+h1 {
+  font-family: "Hachi Maru Pop", cursive;
+  text-transform: uppercase;
+  text-decoration: underline overline;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px blueviolet;
+}
+main{
+  min-height: 500px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.5);
+  margin: auto;
+  position: relative;
+
+  ul {
+    display: flex;
+    padding: 50px;
+    justify-content: space-around;
+
+    li {
+      list-style-type: none;
+      height: 100px;
+      width: 100px;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+    }
+  }
+
+  .grid {
+    padding: 2rem;
+
+    &_container{
+      display: grid;
+      grid-template-columns: 30% 70%;
+
+      img{
+        margin: auto;
+      }
+
+      form{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "i1 i2"
+        "ta ta"
+        "bt bt";
+      }
+    }
+    #firstname{
+      grid-area: i1;
+    }
+    #lastname{
+      grid-area: i2;
+    }
+    textarea{
+      grid-area: ta;
+    }
+    input,
+    textarea {
+      resize: none;
+      margin: 5px;
+      height: 45px;
+      border: 1px solid blueviolet;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 1.1rem;
+    }
+    input[type="submit"] {
+      cursor: pointer;
+      background: burlywood;
+      transition: 0.2s;
+      grid-area: bt;
+
+      &:hover {
+        background: rgb(218, 163, 92);
+      }
+    }
+
+    .color-container{
+      display: grid;
+      height: 700px;
+      grid-gap: 20px;
+
+      grid-template-areas: 
+      "y y p"
+      "r g p"
+      "r l l";
+
+      .yellow{
+        background: yellow;
+        grid-area: y;
+      }
+      .purple{
+        background: purple;
+        grid-area: p;
+      }
+      .red{
+        background: red;
+        grid-area: r;
+      }
+      .green{
+        background: green;
+        grid-area: g;
+      }
+      .lightpurple{
+        background: plum;
+        grid-area: l;
+      }
+    }
+  }
+}
+
+@import "media";

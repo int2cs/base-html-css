@@ -76,33 +76,24 @@ main .grid_container img {
 }
 
 main .grid_container form {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-areas: "i1 i2"
- "ta ta"
- "bt bt";
+      /*grid-template-columns: 1fr 2fr;*/
+      /*grid-template-rows: 1fr 1fr 1fr;*/
+      grid-template-areas:
+              "i1 i2"
+              "ta ta"
+              "bt bt";
 }
 
 main .grid #firstname {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: i1;
 }
 
 main .grid #lastname {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: i2;
 }
 
 main .grid textarea {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: ta;
 }
 
@@ -132,52 +123,80 @@ main .grid input[type="submit"]:hover {
   background: #daa35c;
 }
 
+
+
+
+#grid2{
+  /* width: 600px; */
+  /* height: 800px; */
+  margin: 50px auto;
+  /* background: darkgray; */
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas:
+  "div1 div2 div3"
+  "bottom bottom bottom";
+  gap: 30px
+}
+#grid2 div{
+  text-align: justify;
+  padding: 1em
+}
+
+#grid2 .div1{
+  background: darkgoldenrod;
+  grid-area: div1;
+}
+#grid2 .div2{
+  background: cornflowerblue;
+  grid-area: div2;
+}
+#grid2 .div3{
+  background: tomato;
+  grid-area: div3;
+}
+#grid2 .divBottom{
+  background: darkseagreen;
+  grid-area: bottom;
+}
+
+
+
+
+
 main .grid .color-container {
-  display: -ms-grid;
   display: grid;
   height: 700px;
   grid-gap: 20px;
-      grid-template-areas: "y y p"
- "r g p"
- "r l l";
+  grid-template-areas:
+          "y y p"
+          "r g p"
+          "r l l";
 }
 
 main .grid .color-container .yellow {
   background: yellow;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: y;
 }
 
 main .grid .color-container .purple {
   background: purple;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 3;
   grid-area: p;
 }
 
 main .grid .color-container .red {
   background: red;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
   grid-area: r;
 }
 
 main .grid .color-container .green {
   background: green;
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
   grid-area: g;
 }
 
 main .grid .color-container .lightpurple {
   background: plum;
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
   grid-area: l;
 }
 

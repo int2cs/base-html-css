@@ -103,12 +103,11 @@ form input:focus{
   margin: auto;
   display: grid;
   gap: 20px;
-  background: lightgrey;
   grid-template-columns: 2fr 3fr 1fr;
   grid-template-areas: 
   "p1 p2 p3"
   "p4 p5 p6"
-  "pBottom pBottom pBottom";
+  "pBottom pBottom .";
 }
 
 .p{

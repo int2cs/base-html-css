@@ -62,11 +62,25 @@ hr{
     flex: 1;
 }
 .blog h2{
+    font-size: 1em;
+    padding-left: 42px;
     margin-bottom: 0.5em;
+    text-transform: uppercase;
+    position: relative;
+}
+.blog h2::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: center/cover url("https://picsum.photos/32/32");
 }
 .blog p{
     /*text-align: justify;*/
-    padding: 1em
+    padding: 1em 1em 1em 0
 }
 .blog a{
     display: inline-block;

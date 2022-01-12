@@ -200,6 +200,33 @@ main .grid .color-container .lightpurple {
   grid-area: l;
 }
 
+
+/*FLEXBOX*/
+#flexbox .container{
+  background: grey;
+  display: flex;
+  gap: 10px;
+  flex-direction: row-reverse;
+  justify-content: start;
+}
+
+#flexbox .container div {
+  width: 100px;
+  height: 100px;
+  background: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#flexbox .container div h6{
+  font-weight: bold;
+  font-size: 2em;
+}
+
+
+
+
+/*Media Queries*/
 @media screen and (max-width: 867px) {
   main .grid .grid_container {
     display: block;
